@@ -1,0 +1,51 @@
+.themed-grid-col {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  
+  border: 3px groove black;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  color: red;
+    
+}
+
+.themed-container {
+  padding: .5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+  border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+h1{
+  text-align: center;
+  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+  margin: 0px;
+  
+}
+h2{
+  margin: 0px;
+  text-align: center;
+  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+  
+}
+main{
+  
+  background: no-repeat center/100%, 100% url(https://img.freepik.com/vector-gratis/focos-sobre-fondo-pared-ladrillo-azul_23-2148608680.jpg);
+  background-image: linear-gradient(
+    to bottom,
+   
+    rgba(0, 0, 255, 0.5),
+    rgba(255, 255, 0, 0.5)
+  )
+  
+  
+  
+}
+#demo {
+  
+  border: 3px groove black;
+  padding: 5%
+}
+
+
+
+
