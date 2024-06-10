@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,4 +55,62 @@
             .catch(error => console.error('Error:', error));
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Rick y Morty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .character {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .character img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personajes de Rick y Morty</h1>
+    <div id="character-list">
+    
+    </div>
+
+    <script>
+        const apiUrl = 'https://rickandmortyapi.com/api/character';
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const characterList = document.getElementById('character-list');
+                data.results.forEach(character => {
+                    const characterDiv = document.createElement('div');
+                    characterDiv.className = 'character';
+                    characterDiv.innerHTML = `
+                        <img src="${character.image}" alt="${character.name}">
+                        <h2>${character.name}</h2>
+                        <p><strong>Status:</strong> ${character.status}</p>
+                        <p><strong>Species:</strong> ${character.species}</p>
+                        <p><strong>Gender:</strong> ${character.gender}</p>
+                        <p><strong>Origin:</strong> ${character.origin.name}</p>
+                    `;
+                    characterList.appendChild(characterDiv);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+>>>>>>> 21d844ec2a14c817eed994b01e978790291cb46e
 </html>
